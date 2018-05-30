@@ -1,0 +1,17 @@
+{
+  "name": "paystack-practice",
+  "version": "1.0.0",
+  "description": "A simple back-end for fetching api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "clement udensi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
