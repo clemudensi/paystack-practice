@@ -7,10 +7,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 
     <!-- Angular Material Library -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+            rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
     <script src="../js/range.js"></script>
@@ -21,15 +32,15 @@
     <div style="margin: 16px; padding:16px">
 
         <p>
-            Total number of customers: {{ sliderValue }}
+            Total number of customers: {{max}}
         </p>
         <p>
             Your Top {{ sliderValue }} customers brought in {{ sliderValuePercentage }}% within the period of January 1, 2017 to the current date
         </p>
-
-        <div class="container-fluid">
-            <span>{{min}}</span><input type="range" min="{{min}}"  max="{{max}}" ng-model="sliderValue" ng-change="sliderValueChanged()" aria-label="red" id="red-slider" class="">
-            </input><span>{{max}}</span>
+        
+        <div class="range-slider">
+            <span>{{min}}</span><input class="range-slider__range" type="range" min="{{min}}"  max="{{max}}" ng-model="sliderValue" value="1" ng-change="sliderValueChanged()">
+            <span class="range-slider__value">{{ sliderValue }}</span><span style="float: right;">{{max}}</span>
         </div>
     </div>
 </div>
